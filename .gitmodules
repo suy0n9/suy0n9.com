@@ -1,0 +1,6 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/suy0n9/suy0n9.com.git
+[submodule "themes/etch"]
+	path = themes/etch
+	url = https://github.com/LukasJoswiak/etch.git

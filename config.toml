@@ -1,0 +1,10 @@
+baseURL = "https://suy0n9.com"
+languageCode = "en-us"
+title = "suy0n9.com"
+theme = "etch"
+
+[params]
+  copyright = "suy0n9 All Right Reserved."
+  dark = "auto"
+  highlight = true
+  website = "https://suy0n9.com"
