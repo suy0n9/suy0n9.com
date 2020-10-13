@@ -12,3 +12,7 @@ theme = "etch"
 
 [author]
     name = "suy0n9"
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
