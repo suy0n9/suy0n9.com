@@ -16,3 +16,6 @@ theme = "etch"
 [taxonomies]
     category = "categories"
     tag = "tags"
+
+[permalinks]
+  posts = "/posts/:year/:month/:day/:filename/"
