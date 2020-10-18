@@ -1,10 +1,10 @@
 ---
 title: "MediumからHugoに移行した"
 description:
-date: 2020-10-14T21:41:52+09:00
+date: 2020-10-18T23:38:52+09:00
 categories: []
 tags: ['blog','hugo']
-draft: true
+draft: false
 ---
 
 ブログをMediumからHugoに移行した．
