@@ -161,7 +161,17 @@ KazuhisaTogoさん
 そんなわけで心機一転ブログのテーマを変えてみた。(まだ心機一転するほど記事無いけど。。)
 最近シンプルなのもが好きなのでLifeにしてみた。
 中々いい感じ。
-以下は自分の引用で、前回の更新からの抜粋</description></item><item><title>Goの勉強を始めてみた</title><link>https://suy0n9.com/posts/2016/09/22/started-studying-go/</link><pubDate>Thu, 22 Sep 2016 14:01:23 +0000</pubDate><guid>https://suy0n9.com/posts/2016/09/22/started-studying-go/</guid><description>最近周りでもGoをやり始めてる人が多く、PHP以外の言語も触れる様になりたいと思っていたのでGoの勉強を始めてみました。
+以下は自分の引用で、前回の更新からの抜粋
+go fmtて便利だな
+&amp;mdash; suy0n9 (@suy0n9) October 5, 2016 要件は理解できてもアルゴリズムが出てこない。まだまだ引き出しが足りないな
+&amp;mdash; suy0n9 (@suy0n9) October 12, 2016 アップデートされたGoogleカレンダーの月表示がいいね
+&amp;mdash; suy0n9 (@suy0n9) October 17, 2016 アウトプットが滞ってる。
+書ける内容が無いのはインプットが足りないからだ
+&amp;mdash; suy0n9 (@suy0n9) October 19, 2016 弱冷房車は「冷房を弱くしてる」より「空調を止めてる」のでは無いのか。弱冷房にしては空気が悪すぎる
+&amp;mdash; suy0n9 (@suy0n9) October 20, 2016 Apple Payで財布が要らない時代が始まる。スマホが要らない時代は何年後になるのかな
+&amp;mdash; suy0n9 (@suy0n9) October 25, 2016 コミュ力て重要だな
+&amp;mdash; suy0n9 (@suy0n9) November 11, 2016 wantedly peopleの読み取り機能凄い
+&amp;mdash; suy0n9 (@suy0n9) November 16, 2016 オンラインサービスの合言葉で「もっとも好きな映画は？」「もっとも好きな食べ物は？」みたいな可変的なものは設定しないほうがいい。</description></item><item><title>Goの勉強を始めてみた</title><link>https://suy0n9.com/posts/2016/09/22/started-studying-go/</link><pubDate>Thu, 22 Sep 2016 14:01:23 +0000</pubDate><guid>https://suy0n9.com/posts/2016/09/22/started-studying-go/</guid><description>最近周りでもGoをやり始めてる人が多く、PHP以外の言語も触れる様になりたいと思っていたのでGoの勉強を始めてみました。
 そして早速導入で躓いたので環境構築をQiitaにまとめました。
 macにGoの開発環境を構築する - Qiita
 触りの感想 今回はgvmを使ってGoをインストールしたけど、どこのサイト観ても大体homebrewで入れるパターンが多いのですね。
