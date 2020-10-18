@@ -4,7 +4,6 @@ description:
 date: 2020-10-18T23:38:52+09:00
 categories: []
 tags: ['blog','hugo']
-draft: false
 ---
 
 ブログをMediumからHugoに移行した．
