@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>go on suy0n9.com</title><link>https://suy0n9.com/tags/go/</link><description>Recent content in go on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Thu, 22 Sep 2016 14:01:23 +0000</lastBuildDate><atom:link href="https://suy0n9.com/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Goの勉強を始めてみた</title><link>https://suy0n9.com/posts/2016/09/22/started-studying-go/</link><pubDate>Thu, 22 Sep 2016 14:01:23 +0000</pubDate><guid>https://suy0n9.com/posts/2016/09/22/started-studying-go/</guid><description>最近周りでもGoをやり始めてる人が多く、PHP以外の言語も触れる様になりたいと思っていたのでGoの勉強を始めてみました。
+そして早速導入で躓いたので環境構築をQiitaにまとめました。
+macにGoの開発環境を構築する - Qiita
+触りの感想 今回はgvmを使ってGoをインストールしたけど、どこのサイト観ても大体homebrewで入れるパターンが多いのですね。
+そういえば最近出た『みんなのGo言語』の環境構築編もhomebrewでした。
+IntelliJはプラグイン入れるのが一苦労と感じた。
+たまに出る意味不明なコンパイルエラー
+とかもあるらしく、触りながら他のも検討してみようかなと思います。
+まずどんなもんか触ってみたいていう人には
+A Tour of Goがオススメ
+ブラウザ上でそのまま基本構文を動かしながら学べます。
+さらっと観とくと入りやすいかも。
+まだ環境構築しかやってないのでQiitaに書いたけど、何か簡単なものでも作ったらここに載せようかと思います。
+新しい言語に触れるのは楽しいですね。
+つづく</description></item></channel></rss>
