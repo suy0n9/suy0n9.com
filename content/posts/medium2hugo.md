@@ -10,14 +10,14 @@ tags: ['blog','hugo']
 
 # 動機
 
-主に以下の理由
+主に以下の理由．
 * Mediumの会員登録を促すポップアップが盛んになってきた
 * カスタムドメインを使いたい
 * 記事をGit管理したくなった
 
 カスタムドメインはそのうち設定しようかと思ってのんびりしていたらdeprecationされていた.  
 [Custom Domains service deprecation](https://help.medium.com/hc/en-us/articles/115003053487-Custom-Domains-service-deprecation)  
-なお，近々復活するみたいだが，時期は未定.
+なお，近々復活するみたいだが，時期は未定．
 
 Git管理に関しては，「ブログサービスに一存するよりMarkdownで手元に記事を置いといた方がいざという時にサービスの運営を気にせず制御できる|安心感がある」みたいな話は良く目にしていたので, そうだなぁと思った次第．
 
@@ -37,26 +37,27 @@ Mediumからエクスポートしたデータをmedium2mdでMarkdownに変換す
 ### 変換がうまく行かなかった箇所
 
 #### 記事内のURLのMarkdownタイトルが長くなる
-Markdown記法のURLタイトルに恐らく元のHTMLに含まれているカード型リンク内のサマリ文章までがタイトルになってしまい，とても長いリンクになっていた．長い箇所は記事数がそんなに多くなかったのであまり深く考えず気づいた箇所だけ手直しした...  
+Markdown記法のURLタイトルに恐らく元のHTMLに含まれているカード型リンク内のサマリ文章までがタイトルになってしまい，とても長いリンクになっていた．
+長い箇所は記事数がそんなに多くなかったのであまり深く考えず気づいた箇所だけ手直しした．．．
 
 #### SNSなどのリンクの埋め込み
-HugoではMarkdownの中に簡易的な記述でTwitterやYoutubeなどを埋め込める[Shortcode](https://gohugo.io/content-management/shortcodes/)という機能がある．
+HugoではMarkdownの中に簡易的な記述でTwitterやYouTubeなどを埋め込める[Shortcode](https://gohugo.io/content-management/shortcodes/)という機能がある．
 
-`medium2md`で変換されたMarkdownにはTwitterの埋め込み箇所がまるっと欠損していた．僕の場合は特定の箇所でしかTwitterを参照していなかったので，以下の様な簡易スクリプトで`Shortcode`を生成して貼り付けた.
+`medium2md`で変換されたMarkdownにはTwitterの埋め込み箇所がまるっと欠損していた．僕の場合は特定の箇所でしかTwitterを参照していなかったので，以下の様な簡易スクリプトで`Shortcode`を生成して貼り付けた．
 
 {{< gist suy0n9 739d95242a8c0946d1f313ff1fa593a2 >}}
 
-YouTubeの埋め込み箇所はそのままURLに展開されていた．これまた使用箇所が少なかったので気づいたところのリンクを`Shortcode`で貼り直した.
+YouTubeの埋め込み箇所はそのままURLに展開されていた．これまた使用箇所が少なかったので気づいたところのリンクを`Shortcode`で貼り直した．
 
 
 ## Hosting & Deployment
-構築したサイトはGithub Pagesで公開している.
+構築したサイトはGithub Pagesで公開している．
 
 基本的には以下の公式ページ通りにすればできる．
 
 [Host on GitHub](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
-少し迷った点として，Github Pagesでのサイト公開の方式が2のタイプあり, 公開方式によってデプロイ方式が複数パターンあった.
+少し迷った点として，Github Pagesでのサイト公開の方式が2のタイプあり, 公開方式によってデプロイ方式が複数パターンあった．
 
 公開方式は以下の2つのパターン
 * User/Organization Pages
@@ -77,7 +78,7 @@ YouTubeの埋め込み箇所はそのままURLに展開されていた．これ�
         * `public`ディレクトリをrootとして`master`ブランチで公開
 
 最初は`User/Organization Pages`方式でリポジトリを分けて構築した．この方式の場合，ビルドして生成される`public`ディレクトリを`submodule`化しリポジトリを分けているので，`deploy.sh`なるものを用意してデプロイする．
-しかし次第にリポジトリを2つに分けている事に煩わしさを感じてリポジトリを一つにし`gh-pages`ブランチで公開する様に変更した.
+しかし次第にリポジトリを2つに分けている事に煩わしさを感じてリポジトリを1つにし`gh-pages`ブランチで公開する様に変更した．
 
 ### デプロイ自動化
 Github Actionでデプロイを自動化した．利用したのは以下で，どちらかの`Getting Started`通りに`.github/workflows/gh-pages.yml`を作成し，`master`ブランチに`push`するだけで`gh-pages`ブランチに公開される様になった．
@@ -101,7 +102,7 @@ Github Actionでデプロイを自動化した．利用したのは以下で，�
 # 移行してみて
 記事をMarkdownで書いてGit管理し，自分のドメインでサイトを公開し，サイトデザインは[Theme](https://themes.gohugo.io/)がたくさん公開されていて自作もできるので，トータルで満足している．
 
-細かい設定やタグ機能，デザインなどは少しずつ修正していこうと思う．
+細かい設定やタグ機能，デザインなどは少しずつ修正していきたい．
 
 # まとめ
-いつものペースでたまに更新すると扱い方を忘れそうなので(デプロイ自動化したので大丈夫なはず)，これを機に定期的に書いていきたい．
+いつものペースでたまに更新すると扱い方を忘れそうなので(デプロイ自動化したから大丈夫なはず)，これを機に定期的に書いていきたい．
