@@ -3,7 +3,7 @@ title: ブログはじめました
 description: ''
 date: '2016-09-14T17:56:48.000Z'
 categories: []
-keywords: []
+tags: ['blog']
 ---
 
 ブログを始めよう始めようと思って一年越しの初投稿。

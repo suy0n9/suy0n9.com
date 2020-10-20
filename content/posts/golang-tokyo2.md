@@ -3,7 +3,7 @@ title: 'golang.tokyo #2にいってきた@株式会社はてな'
 description: ''
 date: '2016-12-13T14:40:48.000Z'
 categories: []
-keywords: []
+tags: []
 ---
 
 倍率高めのこれに行ってきたのでメモ

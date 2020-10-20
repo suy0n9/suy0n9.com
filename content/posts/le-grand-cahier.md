@@ -3,7 +3,7 @@ title: 「悪童日記」を読んだ
 description: ''
 date: '2017-10-25T13:01:17.000Z'
 categories: []
-keywords: []
+tags: ['books']
 ---
 
 #### 悪童日記 を読んだ

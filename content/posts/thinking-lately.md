@@ -3,7 +3,7 @@ title: 最近思ったこと
 description: ''
 date: '2016-12-04T07:29:37.000Z'
 categories: []
-keywords: []
+tags: ['life']
 ---
 
 気づいたら前回の更新から大分間があいていた。

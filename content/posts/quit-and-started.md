@@ -3,7 +3,7 @@ title: やめたこと、始めたこと
 description: ''
 date: '2016-09-19T08:13:21.000Z'
 categories: []
-keywords: []
+tags: ['life']
 ---
 
 何かを始めるときには何かをやめなければならない

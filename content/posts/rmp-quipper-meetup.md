@@ -3,7 +3,7 @@ title: 'RMPｘQuipper Food&Drink meetup #4 にいってきた@株式会社リク
 description: ''
 date: '2016-12-20T15:20:37.000Z'
 categories: []
-keywords: []
+tags: []
 ---
 
 先週に前から気になってたこれに行ってきた。  

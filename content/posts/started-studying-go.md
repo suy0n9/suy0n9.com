@@ -3,7 +3,7 @@ title: Goの勉強を始めてみた
 description: ''
 date: '2016-09-22T14:01:23.000Z'
 categories: []
-keywords: []
+tags: ['go']
 ---
 
 最近周りでもGoをやり始めてる人が多く、PHP以外の言語も触れる様になりたいと思っていたのでGoの勉強を始めてみました。

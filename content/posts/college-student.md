@@ -3,7 +3,7 @@ title: 大学生になった
 description: 4月から大学生になった。
 date: '2018-04-17T10:22:10.609Z'
 categories: []
-keywords: []
+tags: ['life']
 ---
 
 4月から大学生になった。
