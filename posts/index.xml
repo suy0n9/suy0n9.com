@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on suy0n9.com</title><link>https://suy0n9.com/posts/</link><description>Recent content in Posts on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Sun, 18 Oct 2020 23:38:52 +0900</lastBuildDate><atom:link href="https://suy0n9.com/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>MediumからHugoに移行した</title><link>https://suy0n9.com/posts/2020/10/18/medium2hugo/</link><pubDate>Sun, 18 Oct 2020 23:38:52 +0900</pubDate><guid>https://suy0n9.com/posts/2020/10/18/medium2hugo/</guid><description>ブログをMediumからHugoに移行した．
-動機 主に以下の理由
+動機 主に以下の理由．
 Mediumの会員登録を促すポップアップが盛んになってきた カスタムドメインを使いたい 記事をGit管理したくなった カスタムドメインはそのうち設定しようかと思ってのんびりしていたらdeprecationされていた.
 Custom Domains service deprecation
-なお，近々復活するみたいだが，時期は未定.
+なお，近々復活するみたいだが，時期は未定．
 Git管理に関しては，「ブログサービスに一存するよりMarkdownで手元に記事を置いといた方がいざという時にサービスの運営を気にせず制御できる|安心感がある」みたいな話は良く目にしていたので, そうだなぁと思った次第．
 これらの条件をすべて満たし，巷でよく使われているHugoにすべきかしばらく検討していた. 構築が面倒だったり凝りすぎて「書く」より「作る」になってしまいそうでずっと棚上げしていたが，重い腰を上げて移行した．
 Hugoとは Goで実装されている「Webサイト構築フレームワーク」だ． 使い方や詳細は公式サイトに詳しく書かれているし，既に色んな人が書いているので以下略．
 移行について 移行方法は公式ページで紹介されているmedium2mdを使用した.
 Mediumからエクスポートしたデータをmedium2mdでMarkdownに変換することでほぼできた．
-変換がうまく行かなかった箇所 記事内のURLのMarkdownタイトルが長くなる Markdown記法のURLタイトルに恐らく元のHTMLに含まれているカード型リンク内のサマリ文章までがタイトルになってしまい，とても長いリンクになっていた．長い箇所は記事数がそんなに多くなかったのであまり深く考えず気づいた箇所だけ手直しした&amp;hellip;
-SNSなどのリンクの埋め込み HugoではMarkdownの中に簡易的な記述でTwitterやYoutubeなどを埋め込めるShortcodeという機能がある．
-medium2mdで変換されたMarkdownにはTwitterの埋め込み箇所がまるっと欠損していた．僕の場合は特定の箇所でしかTwitterを参照していなかったので，以下の様な簡易スクリプトでShortcodeを生成して貼り付けた.
-YouTubeの埋め込み箇所はそのままURLに展開されていた．これまた使用箇所が少なかったので気づいたところのリンクをShortcodeで貼り直した.
-Hosting &amp;amp; Deployment 構築したサイトはGithub Pagesで公開している.
+変換がうまく行かなかった箇所 記事内のURLのMarkdownタイトルが長くなる Markdown記法のURLタイトルに恐らく元のHTMLに含まれているカード型リンク内のサマリ文章までがタイトルになってしまい，とても長いリンクになっていた． 長い箇所は記事数がそんなに多くなかったのであまり深く考えず気づいた箇所だけ手直しした．．．
+SNSなどのリンクの埋め込み HugoではMarkdownの中に簡易的な記述でTwitterやYouTubeなどを埋め込めるShortcodeという機能がある．
+medium2mdで変換されたMarkdownにはTwitterの埋め込み箇所がまるっと欠損していた．僕の場合は特定の箇所でしかTwitterを参照していなかったので，以下の様な簡易スクリプトでShortcodeを生成して貼り付けた．
+YouTubeの埋め込み箇所はそのままURLに展開されていた．これまた使用箇所が少なかったので気づいたところのリンクをShortcodeで貼り直した．
+Hosting &amp;amp; Deployment 構築したサイトはGithub Pagesで公開している．
 基本的には以下の公式ページ通りにすればできる．
 Host on GitHub
-少し迷った点として，Github Pagesでのサイト公開の方式が2のタイプあり, 公開方式によってデプロイ方式が複数パターンあった.
+少し迷った点として，Github Pagesでのサイト公開の方式が2のタイプあり, 公開方式によってデプロイ方式が複数パターンあった．
 公開方式は以下の2つのパターン
 User/Organization Pages (https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/) Project Pages (https://&amp;lt;USERNAME|ORGANIZATION&amp;gt;.github.io/&amp;lt;PROJECT&amp;gt;/) 上記の公開方式により，デプロイ方式が枝分かれする
 GitHub User or Organization Pages
