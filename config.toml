@@ -2,13 +2,9 @@ baseURL = "https://suy0n9.com"
 languageCode = "ja-jp"
 title = "suy0n9.com"
 googleAnalytics = "UA-103680121-3"
-theme = "etch"
-
-[params]
-    copyright = "suy0n9 All Right Reserved."
-    dark = "auto"
-    highlight = true
-    website = "https://suy0n9.com"
+theme = "kiss"
+copyright = "&copy; suy0n9 All Right Reserved."
+Paginate = 5
 
 [author]
     name = "suy0n9"
@@ -17,5 +13,15 @@ theme = "etch"
     category = "categories"
     tag = "tags"
 
+[params.assets]
+    customCSS = ["css/custom.css"]
+
 [permalinks]
-  posts = "/posts/:year/:month/:day/:filename/"
+    posts = "/posts/:year/:month/:day/:filename/"
+
+[params.social]
+    github = "suy0n9"
+    twitter = "suy0n9"
+
+[params.social.config]
+    platforms = ["github","twitter"]

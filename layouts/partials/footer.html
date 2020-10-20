@@ -1,11 +1,20 @@
-<footer id="footer">
+<section class="section">
+  <div class="container has-text-centered">
     <a href="{{ .Site.BaseURL }}">Home</a>
-    <div>
-      <p>
-      &copy; {{ now.Format "2006" }} {{ .Site.Params.copyright }}
-      </p>
-    </div>
-
-    {{ template "_internal/google_analytics.html" .  }}
-
-</footer>
+    <p>{{ .Site.Copyright | safeHTML }}</p>
+    {{if .Site.Params.Info.poweredby}}
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    {{ end }}
+  </div>
+</section>
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+{{ if .Site.Params.matomoAnalytics }}
+{{- partial "analytics/matomo" . -}}
+{{ end }}
+{{ if .Site.Params.fathomAnalytics }}
+{{- partial "analytics/fathom" . -}}
+{{ end }}
+</body>
+</html>
