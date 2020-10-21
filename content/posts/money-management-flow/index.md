@@ -10,7 +10,7 @@ tags: ['life']
 
 現状の構成はこんな感じ
 
-![](/img/1__Y0uW3YZpB1fQ82NJweXTgg.png)
+![](flow.png)
 
 ### 銀行
 
