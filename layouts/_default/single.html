@@ -2,8 +2,10 @@
 {{ partial "nav" . }}
 <section class="section">
   <div class="container">
-    {{if not .Date.IsZero }}<h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>{{ end }}
     <h1 class="title">{{ .Title }}</h1>
+    {{if not .Date.IsZero }}
+    <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
+    {{ end }}
     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
     {{ partial "adsense" . }}
     {{ end }}
@@ -12,7 +14,6 @@
       {{ partial "tags" .Params.tags }}
       {{ end }}
     </div>
-    <br>
     <div class="content">
       {{ .Content }}
       {{ if .Site.Params.Info.related }}
