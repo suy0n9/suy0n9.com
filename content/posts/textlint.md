@@ -3,7 +3,7 @@ title: "textlintで日本語をチェックする"
 date: 2020-10-21T20:17:02+09:00
 categories: []
 tags: ['textlint','vim']
-draft: true
+draft: false
 ---
 
 Markdownでブログを書く際に日本語の間違いやtypoをチェックできるようにtextlintを導入した．
