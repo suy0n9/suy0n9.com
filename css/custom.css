@@ -22,3 +22,7 @@ article+article {
     line-height: 1.75;
     margin-top: 50px;
 }
+
+.content p>code, .content>code {
+    color: #e01e5a;
+}
