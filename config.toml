@@ -13,6 +13,9 @@ Paginate = 10
     category = "categories"
     tag = "tags"
 
+[params.rss]
+    includeContent = true
+
 [params.assets]
     customCSS = ["css/custom.css"]
 
