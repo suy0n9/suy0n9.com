@@ -23,6 +23,14 @@ article+article {
     margin-top: 50px;
 }
 
-.content p>code, .content>code {
+.content p>code,
+.content>code,
+code {
     color: #e01e5a;
+    font-size: 90%;
+    padding: 2px 4px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f8f8;
 }
