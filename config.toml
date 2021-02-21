@@ -19,6 +19,9 @@ Paginate = 10
 [params.assets]
     customCSS = ["css/custom.css"]
 
+[params.info]
+    enableSocial = true # Adds OpenGraph and Twitter cards
+
 [permalinks]
     posts = "/posts/:year/:month/:day/:filename/"
 
