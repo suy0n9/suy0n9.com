@@ -1,5 +1,6 @@
 baseURL = "https://suy0n9.com"
 languageCode = "ja-jp"
+hasCJKLanguage = true
 title = "suy0n9.com"
 googleAnalytics = "UA-103680121-3"
 theme = "kiss"
