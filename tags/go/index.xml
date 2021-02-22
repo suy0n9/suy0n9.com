@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>go on suy0n9.com</title><link>https://suy0n9.com/tags/go/</link><description>Recent content in go on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Thu, 22 Sep 2016 14:01:23 +0000</lastBuildDate><atom:link href="https://suy0n9.com/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Goの勉強を始めてみた</title><link>https://suy0n9.com/posts/2016/09/22/started-studying-go/</link><pubDate>Thu, 22 Sep 2016 14:01:23 +0000</pubDate><guid>https://suy0n9.com/posts/2016/09/22/started-studying-go/</guid><description>最近周りでもGoをやり始めてる人が多く、PHP以外の言語も触れる様になりたいと思っていたのでGoの勉強を始めてみました。 そして早速導入で躓い</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>go on suy0n9.com</title><link>https://suy0n9.com/tags/go/</link><description>Recent content in go on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Thu, 22 Sep 2016 14:01:23 +0000</lastBuildDate><atom:link href="https://suy0n9.com/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Goの勉強を始めてみた</title><link>https://suy0n9.com/posts/2016/09/22/started-studying-go/</link><pubDate>Thu, 22 Sep 2016 14:01:23 +0000</pubDate><guid>https://suy0n9.com/posts/2016/09/22/started-studying-go/</guid><description>最近周りでもGoをやり始めてる人が多く、PHP以外の言語も触れる様になりたいと思っていたのでGoの勉強を始めてみました。 そして早速導入で躓い</description><content:encoded><![CDATA[
+              <p>最近周りでもGoをやり始めてる人が多く、PHP以外の言語も触れる様になりたいと思っていたのでGoの勉強を始めてみました。</p>
+<p>そして早速導入で躓いたので環境構築をQiitaにまとめました。</p>
+<p><a href="https://qiita.com/suy0n9/items/1a7c4a062d4dd8763fc4"><strong>macにGoの開発環境を構築する - Qiita</strong></a></p>
+<h4 id="触りの感想">触りの感想</h4>
+<p>今回は<code>gvm</code>を使ってGoをインストールしたけど、どこのサイト観ても大体<code>homebrew</code>で入れるパターンが多いのですね。<br>
+そういえば最近出た『みんなのGo言語』の環境構築編も<code>homebrew</code>でした。</p>
+<p>IntelliJはプラグイン入れるのが一苦労と感じた。</p>
+<blockquote>
+<p>たまに出る意味不明なコンパイルエラー</p>
+</blockquote>
+<p>とかもあるらしく、触りながら他のも検討してみようかなと思います。</p>
+<p>まずどんなもんか触ってみたいていう人には<br>
+<a href="https://go-tour-jp.appspot.com/">A Tour of Go</a>がオススメ</p>
+<p>ブラウザ上でそのまま基本構文を動かしながら学べます。</p>
+<p>さらっと観とくと入りやすいかも。</p>
+<p>まだ環境構築しかやってないのでQiitaに書いたけど、何か簡単なものでも作ったらここに載せようかと思います。</p>
+<p>新しい言語に触れるのは楽しいですね。</p>
+<p>つづく</p>
+
+              ]]></content:encoded></item></channel></rss>

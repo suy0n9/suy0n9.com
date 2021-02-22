@@ -1,1 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>textlint on suy0n9.com</title><link>https://suy0n9.com/tags/textlint/</link><description>Recent content in textlint on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Wed, 21 Oct 2020 20:17:02 +0900</lastBuildDate><atom:link href="https://suy0n9.com/tags/textlint/index.xml" rel="self" type="application/rss+xml"/><item><title>textlintで日本語をチェックする</title><link>https://suy0n9.com/posts/2020/10/21/textlint/</link><pubDate>Wed, 21 Oct 2020 20:17:02 +0900</pubDate><guid>https://suy0n9.com/posts/2020/10/21/textlint/</guid><description>Markdownでブログを書く際に日本語の間違いやtypoをチェックできるようにtextlintを導入した． textlintとは テキストやM</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>textlint on suy0n9.com</title><link>https://suy0n9.com/tags/textlint/</link><description>Recent content in textlint on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Wed, 21 Oct 2020 20:17:02 +0900</lastBuildDate><atom:link href="https://suy0n9.com/tags/textlint/index.xml" rel="self" type="application/rss+xml"/><item><title>textlintで日本語をチェックする</title><link>https://suy0n9.com/posts/2020/10/21/textlint/</link><pubDate>Wed, 21 Oct 2020 20:17:02 +0900</pubDate><guid>https://suy0n9.com/posts/2020/10/21/textlint/</guid><description>Markdownでブログを書く際に日本語の間違いやtypoをチェックできるようにtextlintを導入した． textlintとは テキストやM</description><content:encoded><![CDATA[
+              <p>Markdownでブログを書く際に日本語の間違いやtypoをチェックできるようにtextlintを導入した．</p>
+<h2 id="textlintとは">textlintとは</h2>
+<p>テキストやMarkdownに書かれた自然言語文章をルールに従ってチェックしてくれるツール．</p>
+<p><a href="https://github.com/textlint/textlint">textlint/textlint</a></p>
+<h2 id="インストールと設定">インストールと設定</h2>
+<p>textlintとルールプリセットをglobalオプションでインストール．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install -g <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>textlint <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>textlint-rule-preset-ja-technical-writing <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>textlint-rule-spellcheck-tech-word
+</code></pre></div><p>そのままだとルールが適用されないので<code>.textlintrc</code>を用意する．今回使用したプリセットルールは以下．</p>
+<ul>
+<li><a href="https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing">preset-ja-technical-writing</a></li>
+<li><a href="https://github.com/azu/textlint-rule-spellcheck-tech-word">textlint-rule-spellcheck-tech-word</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat ~/.textlintrc
+<span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;rules&#34;</span>: <span style="color:#f92672">{</span>
+        <span style="color:#e6db74">&#34;preset-ja-technical-writing&#34;</span>: <span style="color:#f92672">{</span>
+            <span style="color:#e6db74">&#34;sentence-length&#34;</span>: <span style="color:#f92672">{</span>
+                max: <span style="color:#ae81ff">140</span>
+            <span style="color:#f92672">}</span>,
+            <span style="color:#e6db74">&#34;ja-no-mixed-period&#34;</span>: <span style="color:#f92672">{</span>
+                <span style="color:#e6db74">&#34;allowPeriodMarks&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;．&#34;</span><span style="color:#f92672">]</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>,
+        <span style="color:#e6db74">&#34;textlint-rule-spellcheck-tech-word&#34;</span>: true
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>preset-ja-technical-writing</code>では技術文書向けのルールが複数内包されている．
+READMEにも書いてあるがデフォルトでは厳しめのルールになっているため，個別に<code>sentence-length</code>を140文字まで許容，<code>ja-no-mixed-period</code>での文末の句読点を<code>。</code>に加えて<code>．</code>も許容する設定にした。</p>
+<h2 id="vimで非同期にtextlintする">Vimで非同期にtextlintする</h2>
+<p>Vim プラグインマネージャーは<a href="https://github.com/junegunn/vim-plug">junegunn/vim-plug</a>を，Lint エンジンに<a href="https://github.com/dense-analysis/ale">dense-analysis/ale</a>を使用している．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-.vimrc" data-lang=".vimrc"><span style="color:#75715e">&#34;.vimrcから抜粋</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; vim-plugでのインストール </span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">Plug</span> <span style="color:#e6db74">&#39;w0rp/ale&#39;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; ale linterの設定</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">g</span>:<span style="color:#a6e22e">ale_linters</span> = {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>\   <span style="color:#e6db74">&#39;markdown&#39;</span>: [<span style="color:#e6db74">&#39;textlint&#39;</span>]<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>\}<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>これでMarkdownの文章を非同期チェックできるようになった．</p>
+
+              ]]></content:encoded></item></channel></rss>
