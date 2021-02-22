@@ -5,6 +5,7 @@ title = "suy0n9.com"
 googleAnalytics = "UA-103680121-3"
 theme = "kiss"
 copyright = "&copy; suy0n9 All Right Reserved."
+rssLimit = 10
 Paginate = 10
 
 [author]
