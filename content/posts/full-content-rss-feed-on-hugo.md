@@ -1,9 +1,9 @@
 ---
 title: "HugoのRSS FeedをFull-textにする"
-date: 2021-02-22T22:06:47+09:00
+date: 2021-02-23T22:56:26+09:00
 categories: []
 tags: ['blog','hugo','rss']
-draft: true
+draft: false
 ---
 
 このサイトのRSS FeedをFull-textにしたのでメモ．
