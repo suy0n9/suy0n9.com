@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog on suy0n9.com</title><link>https://suy0n9.com/tags/blog/</link><description>Recent content in blog on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Sat, 31 Oct 2020 00:13:34 +0900</lastBuildDate><atom:link href="https://suy0n9.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugoのundraftコマンドを再現する</title><link>https://suy0n9.com/posts/2020/10/31/undraft-command/</link><pubDate>Sat, 31 Oct 2020 00:13:34 +0900</pubDate><guid>https://suy0n9.com/posts/2020/10/31/undraft-command/</guid><description>Hugoでブログを書く際にArchetypesを設定しdraftをtrueにしているのだが，記事を書き終わってgit pushする前にdraf</description><content:encoded><![CDATA[
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>blog on suy0n9.com</title><link>https://suy0n9.com/tags/blog/</link><description>Recent content in blog on suy0n9.com</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><copyright>&amp;copy; suy0n9 All Right Reserved.</copyright><lastBuildDate>Tue, 23 Feb 2021 22:56:26 +0900</lastBuildDate><atom:link href="https://suy0n9.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>HugoのRSS FeedをFull-textにする</title><link>https://suy0n9.com/posts/2021/02/23/full-content-rss-feed-on-hugo/</link><pubDate>Tue, 23 Feb 2021 22:56:26 +0900</pubDate><guid>https://suy0n9.com/posts/2021/02/23/full-content-rss-feed-on-hugo/</guid><description>&lt;p>このサイトのRSS FeedをFull-textにしたのでメモ．&lt;/p></description><content:encoded><![CDATA[
+              <p>このサイトのRSS FeedをFull-textにしたのでメモ．</p>
+<h2 id="背景">背景</h2>
+<p>ふと自分のブログをRSSリーダーに登録してみたら記事の本文が最初だけしか表示されていなかった．</p>
+<p>調べてみると，どうやらHugoの<a href="https://gohugo.io/templates/rss/#the-embedded-rssxml">default RSS template</a>では<code>&lt;description&gt;{{ .Summary | html  }}&lt;/description&gt;</code>のみで<code>.Content</code>が定義されていない模様．</p>
+<h2 id="解決策">解決策</h2>
+<p>関連記事を漁っていると<code>description</code>の<code>.Summary</code>を<code>.Content</code>に変更する方法がいくつか見つかった．
+ただ<code>description</code>は短めの要約を定義するのが推奨っぽいので<code>content:encoded</code>を追加する方式にした．</p>
+<h4 id="rssxmlを用意">rss.xmlを用意</h4>
+<p><code>layouts/_default/rss.xml</code>を配置してデフォルトのtemplateを上書きする．<a href="https://gohugo.io/templates/rss/#the-embedded-rssxml">default RSS template</a>に記載されている<a href="https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/_default/rss.xml">Githubのリンク</a>からダウンロードする．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#e6db74">&#34;https://raw.githubusercontent.com/gohugoio/hugo/master/tpl/tplimpl/embedded/templates/_default/rss.xml&#34;</span> &gt; layouts/_default/rss.xml
+</code></pre></div><h4 id="rssxmlを修正">rss.xmlを修正</h4>
+<p>以下で元のrss.xmlと変更を加えた<code>layouts/_default/rss.xml</code>のdiffを取る．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">diff --label default --label custom &lt;<span style="color:#f92672">(</span>curl <span style="color:#e6db74">&#34;https://raw.githubusercontent.com/gohugoio/hugo/master/tpl/tplimpl/embedded/templates/_default/rss.xml&#34;</span><span style="color:#f92672">)</span> &lt;<span style="color:#f92672">(</span>cat layouts/_default/rss.xml<span style="color:#f92672">)</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff"><span style="color:#f92672">--- default
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+++ custom
+</span><span style="color:#a6e22e"></span><span style="color:#75715e">@@ -11,7 +11,7 @@
+</span><span style="color:#75715e"></span> {{- $pages = $pages | first $limit -}}
+ {{- end -}}
+ {{- printf &#34;&lt;?xml version=\&#34;1.0\&#34; encoding=\&#34;utf-8\&#34; standalone=\&#34;yes\&#34;?&gt;&#34; | safeHTML }}
+<span style="color:#f92672">-&lt;rss version=&#34;2.0&#34; xmlns:atom=&#34;http://www.w3.org/2005/Atom&#34;&gt;
+</span><span style="color:#f92672"></span><span style="color:#a6e22e">+&lt;rss version=&#34;2.0&#34; xmlns:atom=&#34;http://www.w3.org/2005/Atom&#34; xmlns:content=&#34;http://purl.org/rss/1.0/modules/content/&#34;&gt;
+</span><span style="color:#a6e22e"></span>   &lt;channel&gt;
+     &lt;title&gt;{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}&lt;/title&gt;
+     &lt;link&gt;{{ .Permalink }}&lt;/link&gt;
+<span style="color:#75715e">@@ -33,6 +33,11 @@
+</span><span style="color:#75715e"></span>       {{ with .Site.Author.email }}&lt;author&gt;{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}&lt;/author&gt;{{end}}
+       &lt;guid&gt;{{ .Permalink }}&lt;/guid&gt;
+       &lt;description&gt;{{ .Summary | html }}&lt;/description&gt;
+<span style="color:#a6e22e">+      &lt;content:encoded&gt;
+</span><span style="color:#a6e22e">+              {{ `&lt;![CDATA[` | safeHTML }}
+</span><span style="color:#a6e22e">+              {{ .Content  }}
+</span><span style="color:#a6e22e">+              {{ `]]&gt;` | safeHTML  }}
+</span><span style="color:#a6e22e">+      &lt;/content:encoded&gt;
+</span><span style="color:#a6e22e"></span>     &lt;/item&gt;
+     {{ end }}
+   &lt;/channel&gt;
+</code></pre></div><ul>
+<li><code>&lt;rss&gt;</code>に<code>xmlns:content=&quot;http://purl.org/rss/1.0/modules/content/&quot;</code>を追加
+<ul>
+<li>これが無いと<code>Namespace prefix content on encoded is not defined</code>でエラーになる</li>
+</ul>
+</li>
+<li><code>&lt;content:encoded&gt;</code>を追加
+<ul>
+<li><code>&lt;content:encoded&gt;{{ .Content | html }}</code>でも良さそう</li>
+</ul>
+</li>
+</ul>
+<p>ひとまずこれでFeedlyではうまく表示出来てそう．Inoreader側ではキャッシュが保持されて過去記事には適用され無さそうなのでしばらくこれで運用してみて様子をみる．</p>
+<h1 id="参考">参考</h1>
+<hr>
+<ul>
+<li><a href="https://discourse.gohugo.io/t/full-text-rss-feed/8368">Full-text RSS feed</a></li>
+<li><a href="https://blog.eternalrecurrence.space/posts/displaying-the-full-content-in-hugo-rss-feed/#bonus-the-difference-between--and---in-hugo">Displaying the Full Content in Hugo&rsquo;s RSS feed</a></li>
+<li><a href="https://unusually.pink/full-content-rss-feeds-with-hugo/">Full Content RSS Feeds With Hugo</a></li>
+<li><a href="https://blog.karashi.org/posts/fulltext-rss-with-hugo/">HugoでFull Text RSSを有効化する</a></li>
+</ul>
+              ]]></content:encoded></item><item><title>Hugoのundraftコマンドを再現する</title><link>https://suy0n9.com/posts/2020/10/31/undraft-command/</link><pubDate>Sat, 31 Oct 2020 00:13:34 +0900</pubDate><guid>https://suy0n9.com/posts/2020/10/31/undraft-command/</guid><description>Hugoでブログを書く際にArchetypesを設定しdraftをtrueにしているのだが，記事を書き終わってgit pushする前にdraf</description><content:encoded><![CDATA[
               <p>Hugoでブログを書く際に<a href="https://gohugo.io/content-management/archetypes/">Archetypes</a>を設定しdraftをtrueにしているのだが，記事を書き終わって<code>git push</code>する前にdraftをfalseにするのを毎回忘れてしまう．
 更に<code>hugo new posts/&lt;filename&gt;.md</code>でMarkdown作成時にタイムスタンプが付与されるが，記事を書き終えた後に再度タイムスタンプを書き換えるのが面倒だったので調べた．</p>
 <h2 id="結果">結果</h2>
