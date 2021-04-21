@@ -3,6 +3,7 @@ title: "『使える脳の鍛え方』を読んだ"
 date: 2021-04-21T00:20:04+09:00
 categories: []
 tags: ['book']
+image: make-it-stick.jpg
 draft: false
 ---
 
