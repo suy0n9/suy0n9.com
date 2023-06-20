@@ -30,6 +30,7 @@ Paginate = 10
 [params.social]
     github = "suy0n9"
     twitter = "suy0n9"
+    rss = "index.xml"
 
 [params.social.config]
-    platforms = ["github","twitter"]
+    platforms = ["github", "twitter", "rss"]
