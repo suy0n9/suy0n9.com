@@ -23,6 +23,8 @@ Paginate = 10
 
 [params.info]
     enableSocial = true # Adds OpenGraph and Twitter cards
+    related = true # Includes related articles at the bottom of the article
+    codeCopy = true # Add copy button above code blocks
 
 [permalinks]
     posts = "/posts/:year/:month/:day/:filename/"
@@ -34,3 +36,6 @@ Paginate = 10
 
 [params.social.config]
     platforms = ["github", "twitter", "rss"]
+
+[params.sections_right]
+"https://suy0n9.me" = "About"
