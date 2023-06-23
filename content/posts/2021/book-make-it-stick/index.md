@@ -7,7 +7,7 @@ image: /images/2021/make-it-stick.jpg
 draft: false
 ---
 
-![](/images/2021/make-it-stick.jpg)
+![](make-it-stick.jpg)
 
 『[使える脳の鍛え方](https://amzn.to/3v6hUnC)』を読んだのでメモ。
 
