@@ -34,10 +34,18 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
       <content:encoded>
-              {{ `<![CDATA[` | safeHTML }}
-              {{ .Content  }}
-              {{ `]]>` | safeHTML  }}
-      </content:encoded>
+        {{ `<![CDATA[` | safeHTML }}
+        {{ .Content   }}
+        {{ `]]>` | safeHTML   }}
+      </content:encoded>`]]` }}
+      {{ range ( where .Site.RegularPages ".RelPermalink" .RelPermalink | first 1 ) }}
+        {{- $images := .Resources.ByType "image" -}}
+        {{- $featured := $images.GetMatch "*feature*" -}}
+        {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+        {{- with $featured -}}
+        <media:content xmlns:media="http://search.yahoo.com/mrss/" url="{{ $featured.Permalink  }}" />
+        {{- end -}}
+      {{ end }}
     </item>
     {{ end }}
   </channel>

@@ -10,56 +10,49 @@
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
 
-
 [[main]]
   name = "Posts"
   pageRef = "posts"
   weight = 10
+
+#[[main]]
+#  name = "Parent"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 1"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 2"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+#[[subnavigation]]
+#  name = "An interesting topic"
+#  pageRef = "tags/interesting-topic"
+#  weight = 10
+
+#[[subnavigation]]
+#  name = "My Awesome Category"
+#  pre = "github"
+#  pageRef = "categories/awesome"
+#  weight = 20
 
 [[main]]
   name = "About"
   pageRef = "about"
   weight = 20
 
-# [[main]]
-#   name = "Categories"
-#   pageRef = "categories"
-#   weight = 20
-
-# [[main]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 30
-
 [[main]]
-  name = "RSS"
+  identifier = "RSS"
+  pre = "rss"
   url = "/index.xml"
   weight = 30
 
-# [[main]]
-#   name = "GitHub"
-#   url = "https://github.com/suy0n9/"
-#   weight = 40
-#   [main.params]
-#     icon = "github"
-#     showName = false
-#     target = "_blank"
-#
-# [[main]]
-#   name = "Twitter"
-#   url = "https://twitter.com/suy0n9/"
-#   weight = 50
-#   [main.params]
-#     icon = "twitter"
-#     showName = false
-#     target = "_blank"
-
-# [[main]]
-#   identifier = "search"
-#   weight = 99
-#   [main.params]
-#     action = "search"
-#     icon = "search"
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
@@ -69,3 +62,8 @@
   name = "Tags"
   pageRef = "tags"
   weight = 10
+
+# [[footer]]
+#   name = "Categories"
+#   pageRef = "categories"
+#   weight = 20
