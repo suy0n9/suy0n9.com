@@ -7,6 +7,7 @@ draft: false
 ---
 
 舌下免疫療法を初めて4年が経ったので経過を振り返る。
+![sublingual-immunotherapy.jpg](sublingual-immunotherapy.jpg)
 <!--more-->
 
 ## 前回記事
