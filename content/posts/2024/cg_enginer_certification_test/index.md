@@ -1,9 +1,9 @@
 ---
 title: "「CGエンジニア検定 ベーシック」取得記"
-date: 2024-08-18T15:00:57+09:00
+date: 2024-08-18T17:11:38+09:00
 categories: []
 tags: ['Certification']
-draft: true
+draft: false
 ---
 
 
