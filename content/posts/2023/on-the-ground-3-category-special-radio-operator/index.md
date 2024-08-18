@@ -1,5 +1,5 @@
 ---
-title: "第三級陸上特殊無線技士取得記"
+title: "「第三級陸上特殊無線技士」取得記"
 date: 2023-06-27T00:37:40+09:00
 categories: []
 tags: ['Certification']
