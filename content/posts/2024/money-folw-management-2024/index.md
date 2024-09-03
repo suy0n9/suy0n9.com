@@ -1,9 +1,9 @@
 ---
 title: "お金の管理と流れ2024"
-date: 2024-09-01T17:35:02+09:00
+date: 2024-09-03T23:09:18+09:00
 categories: []
 tags: ['life']
-draft: true
+draft: false
 ---
 
 
