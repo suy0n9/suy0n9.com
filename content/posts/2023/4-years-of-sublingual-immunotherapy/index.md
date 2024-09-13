@@ -1,12 +1,12 @@
 ---
-title: "舌下免疫療法を初めて4年が経った"
+title: "舌下免疫療法を始めて4年が経った"
 date: 2023-07-02T19:30:57+09:00
 categories: []
 tags: ['life']
 draft: false
 ---
 
-舌下免疫療法を初めて4年が経ったので経過を振り返る。
+舌下免疫療法を始めて4年が経ったので経過を振り返る。
 ![sublingual-immunotherapy.jpg](sublingual-immunotherapy.jpg)
 <!--more-->
 
