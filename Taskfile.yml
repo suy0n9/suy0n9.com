@@ -1,0 +1,38 @@
+version: "3"
+
+vars:
+  YEAR:
+    sh: date +"%Y"
+
+tasks:
+  update-submodules:
+    desc: update git submodules
+    cmd: git submodule update --remote --merge
+
+  server:
+    desc: Run Hugo server with drafts
+    cmds:
+      - hugo server -D
+
+  new-post:
+    desc: Create a new Hugo content file
+    cmds:
+      - task: create-post
+      - hugo new posts/{{.YEAR}}/{{.CLI_ARGS}}.md
+
+  new-post-with-img:
+    desc: Create a new Hugo content file with an image
+    deps: [create-post]
+    cmds:
+      - hugo new posts/{{.YEAR}}/{{.CLI_ARGS}}/index.md
+
+  create-post:
+    preconditions:
+      - sh: '[ ! -z "{{.CLI_ARGS}}" ]'
+        msg: "Error: Please provide a file name using 'task new-post -- <file-name>'"
+
+  undraft:
+    desc: "Interactively undraft a post using fzf"
+    cmds:
+      - ./scripts/undraft.sh
+    silent: false
