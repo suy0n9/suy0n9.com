@@ -129,11 +129,11 @@ cardViewScreenWidth = false
 # domain = "llama.yoursite.com"
 
 [buymeacoffee]
-# identifier = ""
-# globalWidget = true
-# globalWidgetMessage = "Hello"
-# globalWidgetColor = "#FFDD00"
-# globalWidgetPosition = "Right"
+identifier = "suy0n9"
+ globalWidget = true
+ # globalWidgetMessage = "Hello"
+ globalWidgetColor = "#FFDD00"
+ globalWidgetPosition = "Right"
 
 [verification]
 # google = ""
