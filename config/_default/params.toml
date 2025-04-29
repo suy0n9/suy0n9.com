@@ -130,10 +130,10 @@ cardViewScreenWidth = false
 
 [buymeacoffee]
 identifier = "suy0n9"
- globalWidget = true
+globalWidget = true
  # globalWidgetMessage = "Hello"
- globalWidgetColor = "#FFDD00"
- globalWidgetPosition = "Right"
+globalWidgetColor = "#FFDD00"
+globalWidgetPosition = "Right"
 
 [verification]
 # google = ""
