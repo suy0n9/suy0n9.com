@@ -7,13 +7,13 @@ if [ -z "$file" ]; then
     exit 1
 fi
 
-now="$(date "+%Y-%m-%dT%H:%M:%S%z" | sed -e 's/00$/:00/')"
+now="$(date "+%Y-%m-%d")"
 
 if [ -f "${file}" ]; then
     sed -i -e 's/^date: 20.*$/date: '"${now}"'/' \
         -e 's/^draft: true$/draft: false/' "${file}"
     echo "Update file: ${file}"
-    echo "Set data to: ${now}"
+    echo "Set date to: ${now}"
     echo "Draft status set to false"
 else
     echo "${file} not found"
