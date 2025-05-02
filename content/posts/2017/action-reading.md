@@ -2,8 +2,8 @@
 title: アクションリーディングを読んだ
 description: ''
 date: '2017-06-19T14:08:13.000Z'
-categories: []
-tags: ['book']
+categories: ['book']
+tags: []
 ---
 
 最近の積読が酷くて丁度そんな時にKindleセールで見つけたので即ポチして読んだ。

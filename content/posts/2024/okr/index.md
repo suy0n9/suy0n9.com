@@ -1,8 +1,8 @@
 ---
 title: "「OKR」を読んだ"
 date: 2024-01-07T16:17:10+09:00
-categories: []
-tags: ['book']
+categories: ['book']
+tags: []
 draft: false
 ---
 
