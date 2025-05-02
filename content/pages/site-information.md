@@ -1,6 +1,7 @@
 ---
 title: "Site Information"
-date: "2025-04-29"
+layout: "simple"
+sharingLinks: false
 ---
 
 ## はじめに
